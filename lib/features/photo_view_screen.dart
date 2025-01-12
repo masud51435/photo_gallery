@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:photo_view/photo_view.dart';
 
 import '../model/photo_model.dart';
@@ -12,25 +13,47 @@ class PhotoViewScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   actions: [
-      //     IconButton(
-      //       icon: Icon(Icons.download),
-      //       onPressed: () {},
-      //     )
-      //   ],
-      // ),
-      body: Hero(
-        tag: 'photo$index',
-        child: PhotoView(
-          imageProvider: NetworkImage(photo.fullImageUrl),
-          minScale:
-              PhotoViewComputedScale.contained, // Fit image within the screen
-          maxScale: PhotoViewComputedScale.covered * 3.0, // Allow 3x zoom
-          backgroundDecoration: BoxDecoration(
-            color: Colors.black, // Match background with app theme
+      body: Stack(
+        children: [
+          Hero(
+            tag: 'photo$index',
+            child: PhotoView(
+              imageProvider: NetworkImage(photo.fullImageUrl),
+              minScale: PhotoViewComputedScale.contained,
+              maxScale: PhotoViewComputedScale.covered * 3.0,
+              backgroundDecoration: BoxDecoration(
+                color: Colors.black,
+              ),
+            ),
           ),
-        ),
+          Positioned(
+            top: 20,
+            right: 10,
+            child: OutlinedButton(
+              onPressed: () {
+                Get.back();
+              },
+              style: OutlinedButton.styleFrom(
+                shape: const CircleBorder(),
+                side: const BorderSide(color: Colors.white, width: 2),
+              ),
+              child: Icon(Icons.close, color: Colors.white),
+            ),
+          ),
+          Positioned(
+            bottom: 20,
+            right: 10,
+            left: 10,
+            child: OutlinedButton(
+              onPressed: () {},
+              style: OutlinedButton.styleFrom(
+                side: const BorderSide(color: Colors.white, width: 2),
+              ),
+              child:
+                  Text('Download Now', style: TextStyle(color: Colors.white)),
+            ),
+          ),
+        ],
       ),
     );
   }
