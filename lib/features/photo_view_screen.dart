@@ -28,20 +28,34 @@ class PhotoViewScreen extends StatelessWidget {
           ),
           Positioned(
             top: 20,
-            right: 10,
-            child: OutlinedButton(
-              onPressed: () {
-                Get.back();
-              },
-              style: OutlinedButton.styleFrom(
-                shape: const CircleBorder(),
-                side: const BorderSide(color: Colors.white, width: 2),
-              ),
-              child: Icon(Icons.close, color: Colors.white),
+            right: 0,
+            child: Row(
+              children: [
+                OutlinedButton(
+                  onPressed: () {
+                    Get.back();
+                  },
+                  style: OutlinedButton.styleFrom(
+                    shape: const CircleBorder(),
+                    side: const BorderSide(color: Colors.white, width: 2),
+                  ),
+                  child: Icon(Icons.share, color: Colors.white),
+                ),
+                OutlinedButton(
+                  onPressed: () {
+                    Get.back();
+                  },
+                  style: OutlinedButton.styleFrom(
+                    shape: const CircleBorder(),
+                    side: const BorderSide(color: Colors.white, width: 2),
+                  ),
+                  child: Icon(Icons.close, color: Colors.white),
+                ),
+              ],
             ),
           ),
           Positioned(
-            bottom: 20,
+            bottom: 10,
             right: 10,
             left: 10,
             child: OutlinedButton(
