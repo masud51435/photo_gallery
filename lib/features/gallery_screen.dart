@@ -9,6 +9,7 @@ class GalleryScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('Image Gallery'),
       ),
+      
     );
   }
 }
