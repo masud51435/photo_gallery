@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
 import 'package:image_gallery/controller/photo_controller.dart';
+import 'package:shimmer/shimmer.dart';
 
 import 'photo_view_screen.dart';
 
@@ -68,8 +69,12 @@ class GalleryScreen extends StatelessWidget {
                             child: CachedNetworkImage(
                               imageUrl: controller.photos[index].thumbnailUrl,
                               fit: BoxFit.cover,
-                              placeholder: (context, url) => const Center(
-                                child: CircularProgressIndicator(),
+                              placeholder: (context, url) => Shimmer.fromColors(
+                                baseColor: Colors.grey[200]!,
+                                highlightColor: Colors.grey[100]!,
+                                child: Container(
+                                  color: Colors.grey[200],
+                                ),
                               ),
                               errorWidget: (context, url, error) =>
                                   const Icon(Icons.error),

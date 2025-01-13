@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:photo_view/photo_view.dart';
+import 'package:share_plus/share_plus.dart';
 
 import '../model/photo_model.dart';
 
@@ -32,8 +33,8 @@ class PhotoViewScreen extends StatelessWidget {
             child: Row(
               children: [
                 OutlinedButton(
-                  onPressed: () {
-                    Get.back();
+                  onPressed: () async {
+                    await Share.share(photo.fullImageUrl);
                   },
                   style: OutlinedButton.styleFrom(
                     shape: const CircleBorder(),
