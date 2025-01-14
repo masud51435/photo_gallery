@@ -47,23 +47,23 @@ class _PhotoViewScreenState extends State<PhotoViewScreen> {
             right: 0,
             child: Row(
               children: [
-                OutlinedButton(
+                FilledButton(
                   onPressed: () async {
                     await Share.share(widget.photo.fullImageUrl);
                   },
                   style: OutlinedButton.styleFrom(
                     shape: const CircleBorder(),
-                    side: const BorderSide(color: Colors.white, width: 2),
+                    backgroundColor: Colors.indigo.shade400,
                   ),
                   child: const Icon(Icons.share, color: Colors.white),
                 ),
-                OutlinedButton(
+                FilledButton(
                   onPressed: () {
                     Get.back();
                   },
                   style: OutlinedButton.styleFrom(
                     shape: const CircleBorder(),
-                    side: const BorderSide(color: Colors.white, width: 2),
+                    backgroundColor: Colors.indigo.shade400,
                   ),
                   child: const Icon(Icons.close, color: Colors.white),
                 ),

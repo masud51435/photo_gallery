@@ -4,6 +4,7 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
 import 'package:image_gallery/controller/photo_controller.dart';
 import 'package:shimmer/shimmer.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
 
 import 'photo_view_screen.dart';
 
@@ -18,7 +19,12 @@ class GalleryScreen extends StatelessWidget {
       body: Obx(
         () {
           if (controller.isLoading.value && controller.photos.isEmpty) {
-            return const Center(child: CircularProgressIndicator());
+            return Center(
+              child: LoadingAnimationWidget.staggeredDotsWave(
+                color: Colors.deepPurple,
+                size: 50,
+              ),
+            );
           }
 
           return NotificationListener<ScrollNotification>(
@@ -87,11 +93,14 @@ class GalleryScreen extends StatelessWidget {
                   ),
                 ),
                 if (controller.isLoading.value)
-                  const SliverToBoxAdapter(
+                  SliverToBoxAdapter(
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Center(
-                        child: CircularProgressIndicator(),
+                        child: LoadingAnimationWidget.staggeredDotsWave(
+                          color: Colors.deepPurple.shade100,
+                          size: 40,
+                        ),
                       ),
                     ),
                   ),
