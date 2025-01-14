@@ -35,7 +35,7 @@ The Image Gallery App is a Flutter-based application that showcases images from 
 <ol>
   <li>Clone the repository:</li>
 
-  <pre><code>git clone https://github.com/yourusername/image_gallery_app.git</code></pre>
+  <pre><code>https://github.com/masud51435/photo_gallery.git</code></pre>
 
   <li>Navigate to the project directory:</li>
 
