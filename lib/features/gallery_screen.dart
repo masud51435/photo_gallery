@@ -20,7 +20,7 @@ class GalleryScreen extends StatelessWidget {
         () {
           if (controller.isLoading.value && controller.photos.isEmpty) {
             return Center(
-              child: LoadingAnimationWidget.staggeredDotsWave(
+              child: LoadingAnimationWidget.progressiveDots(
                 color: Colors.deepPurple,
                 size: 50,
               ),
