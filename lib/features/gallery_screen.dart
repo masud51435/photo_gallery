@@ -95,7 +95,7 @@ class GalleryScreen extends StatelessWidget {
                 if (controller.isLoading.value)
                   SliverToBoxAdapter(
                     child: Padding(
-                      padding: EdgeInsets.all(16.0),
+                      padding: EdgeInsets.all(5.0),
                       child: Center(
                         child: LoadingAnimationWidget.staggeredDotsWave(
                           color: Colors.deepPurple.shade100,
