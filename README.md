@@ -106,6 +106,6 @@ This project is licensed under the <a href="https://opensource.org/licenses/MIT"
 
 <h2>📧 Contact</h2>
 <p>
-For any inquiries or feedback, reach out via email at <strong>your-email@example.com</strong> or connect with me on <a href="https://www.linkedin.com/in/masud-rana-582243227/">LinkedIn</a>.
+For any inquiries or feedback, reach out via email at <strong>your-masudrana82955@gmail.com</strong> or connect with me on <a href="https://www.linkedin.com/in/masud-rana-582243227/">LinkedIn</a>.
 </p>
 
