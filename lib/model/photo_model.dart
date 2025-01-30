@@ -17,6 +17,7 @@ class Photo extends HiveObject {
     required this.id,
     required this.thumbnailUrl,
     required this.fullImageUrl,
+    
   });
 
   factory Photo.fromJson(Map<String, dynamic> json) {
